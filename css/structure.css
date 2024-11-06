@@ -1,0 +1,126 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+
+*{
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+body{
+    background-color: rgb(34, 34, 34);
+}
+
+#conteneur{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 75% 25%;
+    max-width: 99%;
+    min-height: 98vh;
+    grid-template-rows: 80px fit-content 5fr 60px;
+    grid-template-areas: 
+                "nav nav"
+                "header aside"
+                "main aside"
+                "footer footer";
+}
+
+.gauche{
+    padding: 0px 10px;
+}
+
+.droite{
+    float: right;
+    padding: 0px 10px;
+}
+
+nav{
+    grid-area: nav;
+    align-items: center;
+    background-color: black;
+    border-radius: 15px;
+    align-content: center;
+}
+
+.lien{
+    height: 40px;
+    display: inline-block;
+    align-content: center;
+}
+
+.lien:hover{
+    background-color: rgb(0, 110, 255);
+    border-radius: 15px;
+}
+
+header{
+    grid-area: header;
+    padding-left: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    align-content: center;
+}
+
+main{
+    grid-area: main;
+}
+
+.texte-main{
+    padding-left: 37px;
+    word-spacing: 3px;
+    line-height: 1.6;
+}
+
+.image-jeu{
+    max-width: 350px;
+    margin: auto;
+}
+
+figure {
+
+    display: inline-block;
+    border: solid white 1px;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    float: left;
+   }
+
+aside{
+    grid-area: aside;
+    /* background-color: rgb(0, 110, 255); */
+    background-image: linear-gradient(black, rgb(0, 110, 255), black);
+    border-radius: 20px;
+
+}
+
+aside > .titre-aside{
+    font-weight: bold;
+}
+
+.titre-aside{
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.texte-aside{
+    font-size: 15px;
+    padding: 0px 25px;
+    word-spacing: 3px;
+    line-height: 1.6;
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+    border-radius: 15px;
+    align-content: center;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.footer{
+    margin: 5px;
+}
